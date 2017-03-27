@@ -1,0 +1,13 @@
+As a Customer I want to be able choose and edit bundles, so as to fit my budget
+
+As a Customer I want to be able to be able to choose from a variety of available party planning packages, so as to be able to choose the right fit to plan my party
+
+As a Developer, I want to be able to host our website on a sever (possibly Amazon AWS) so as to make the website accessible for as many customers as possible.
+
+As a Developer, I want to use a frame work to streamline my application so that I can connect the front end and the back end.
+
+As a Developer, I want to be able to store customer information, plans and purchases, and product catalogue to a database, so as to retrieve and service them later.
+
+As a Designer, I want to design a simple and minimalistic interface, that lets users choose a package in the least number of steps possible so as to make their experience simple and pleasurable.
+
+As a Project Manager, I want to distribute drive the development of the product and ensure that we meet our deadlines to ensure timely delivery of our product. 
