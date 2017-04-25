@@ -1,46 +1,932 @@
 <!DOCTYPE html>
-<html>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
-<script src="{{ url_for('static',filename='scripts/jquery-3.0.0.js') }}"></script>
-<script src="{{ url_for('static',filename='js/view.js') }}"></script>
-<body>
-<div id="wrapper" class="wrapper">
-    <!-- Make sure to keep all page content within the #page-content-wrapper div. -->
-    <!-- Page Content -->
-    <div id="page-content-wrapper" class="page-content-wrapper">
-        <div class="container-fluid">
-            <div class="row-1">
-                <div class="col-lg-12">
-                    <h1>Fête</h1>
-                </div>
-            </div>
-            <div class="row-2">
-                <div id="catergory-container" class="category-container">
-                    <div id="category-container-1" class="category-container-1 category-options"><span>Theme Parties</span></div>
-                    <div id="category-container-2" class="category-container-2 category-options"><span>Holiday Parties</span></div>
-                    <div id="category-container-3" class="category-container-3 category-options"><span>Toys & Games</span></div>
-                    <div id="category-container-1" class="category-container-1 category-options"><span>Candy</span></div>
-                    <div id="category-container-1" class="category-container-1 category-options"><span>Baking</span></div>
-                </div>
-            </div>
-        </div>
-        <div id="main-options-container-1" class="main-options-container-1 main-options-container">
-            <div>Party Bundles</div>
-        </div>
-        <div id="main-options-container-2" class="main-options-container-2 main-options-container">
-            <div>Custom Bundles</div>
-        </div>
-        <div id="main-options-container-3" class="main-options-container-3 main-options-container">
-            <div>Themed Bundles</div>
-        </div>
-        <div id="main-options-container-4" class="main-options-container-4 main-options-container">
-            <div>Catering Service</div>
-        </div>
-    </div>
-    <!-- /#page-content-wrapper -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fete</title>
+    <!-- Bootstrap -->
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./static/css/styles.css" rel="stylesheet">
+    <link href="./static/css/header-logo-center.css" rel="stylesheet">
+    <link href="./static/css/footer-modern-bg.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
 
-</div>
-</body>
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic,700,700italic,600italic,800,800italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Atma" rel="stylesheet">
+    <link href="./static/css/font-awesome.min.css" rel="stylesheet">
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- (necessary for Animation scroll) -->
+    <script src="./static/js/jquery.viewportchecker.js"></script>
+    <script src="./static/js/jquery.viewportchecker-effect.js"></script>
+
+    <!-- necessary for Counter) -->
+    <script src="./static/js/easy-pie-chart.js"></script>
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="wrapper" class="wrapper clearfix">
+      <header id="header-logo-centered" class="header header-logo-centered clearfix">
+        <div class="nav-top nav-top-info clearfix">        
+          <div class="col-md-12 col-sm-12 col-xs-12 text-left">
+            <div class="text text-upper">
+              <strong>Planning parties you can brag about!</strong>
+            </div>
+            <div class="button">
+              <a href="#"><span>book now</span></a>
+            </div>
+            <div class="contacts">
+              <span><i class="fa fa-envelope-o" aria-hidden="true"></i>office@fete.com</span>
+              <span><i class="fa fa-mobile" aria-hidden="true"></i>+1 347-220-5251</span>
+            </div>
+          </div>          
+        </div><!-- END nav-top -->
+        <div class="header-top">
+          <div class="container container-sticky">
+            <div class="col-md-9 col-sm-12 col-xs-12 col-nav-section clearfix">
+                <nav class="hkiddo-nav navbar navbar-default">
+                  <div class="fluid">
+                    
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div id="navbar" class="nav collapse navbar-collapse">
+                      <ul id="menu-main" class="nav navbar-nav navbar-left">
+                        <li class="dropdown active">
+                          <a href="index.html">Home</a>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">About <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="#">Our Team</a>
+                            </li>
+                            <li><a href="career.html">Career</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Our Parties<span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="portfolio-inner-page.html">Premium Package</a></li>
+                            <li><a href="portfolio-inner-page.html">Delux Package</a></li>
+                            <li><a href="portfolio-inner-page.html">Standard Package</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown">
+                          <a href="contacts.html">Contacts</a>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Blogs<span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="pricing-table.html">Pricing Table</a></li>
+                          </ul>
+                        </li>
+                      </ul>   
+                    </div>
+                  </div>
+                </nav>
+              </div><!-- END col-md-9 -->
+              <div class="col-md-3 col-sm-12 col-xs-12col-links-section clearfix">
+                <div class="sticky-logo">
+                  <a href="">
+                      <img src="./static/images/fete_logo.png" alt="" class="img-responsive logo">
+                  </a>
+                </div><!-- END sticky-logo -->
+                <div class="socials hidden-xs">
+                  <ul class="social-links2">
+                    <li class="social">
+                      <a href="#" class="facebook " target="_blank"></a>
+                    </li>
+                    <li class="social">
+                      <a href="#" class="twitter" target="_blank"></a>
+                    </li>
+                    <li class="social">
+                      <a href="#" class="googleplus" target="_blank"></a>
+                    </li>
+                  </ul>
+                </div><!-- END socials-box -->
+              </div><!-- END col-md-3 -->
+          </div><!-- END container container-sticky -->
+        </div><!-- END header-top -->
+        <div class="header-bottom">
+          <div class="container text-center">
+            <a href="" class="navbar-brand col-xs-10">
+              <img src="./static/images/fete_logo.png" width="210" alt="" class="img-responsive center-block logo">
+            </a>            
+          </div>  
+        </div><!-- END header-bottom -->
+      </header><!-- END HEADER -->
+      <div id="main" class="clearfix">
+        <div class="carousel fade-carousel slide slider-home" data-ride="carousel" data-interval="4000" id="bs-carousel">
+         
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+
+            <div class="item slides active">
+              <div class="slide-3" style="background-image: url('images/happykiddo_slider_img3.jpg');">
+                <div class="blue-lines absolute">
+                </div>
+                <div class="container clearfix hero-container">
+                  <div class="animator absolute animated fadeIn">
+                    <img src="./static/images/happykiddo_500x400.png" alt="">
+                  </div>
+                  <div class="boat1 absolute">
+                    <img src="./static/images/happykiddo_slider_img3_p3.png" alt="">
+                  </div>
+                  <div class="boat2 absolute">
+                    <img src="./static/images/happykiddo_slider_img3_p4.png" alt="">
+                  </div>
+                  <div class="hero col-md-5 col-sm-6 col-xs-12">
+                    <div class="hgroup">
+                        <h1 class="animated fadeInDown scroll-time5">BRING A <span style="color:#ccf4f8">SMILE</span> TO <br>YOUR CHILD!</h1>
+                        <p class="animated fadeInDown scroll-time6">This Birthday throw your child a Party he or she will remember. Book one of our several packages. Sit back and enjoy the complements.</p>
+                    </div>       
+                    <div class="btn-box animated fadeIn scroll-time9 clearfix">
+                      <a href="" class="transparent-btn happykiddo-btn">ABOUT US</a>
+                      <a href="" class="filled-btn happykiddo-btn">BOOK NOW</a>
+                    </div>
+                  </div>
+                </div>
+              </div>       
+            </div> <!-- END Slide_1 -->
+
+          </div><!-- END .carousel-inner -->
+        </div> <!-- END .carousel -->
+        <div class="cta blue-bg clearfix">
+          <div class="container clearfix">
+            <div class="row-height">
+              <div class="col-md-9 col-sm-9 col-xs-12 col-height">
+                <h2>We create the atmosphere you wish to offer to your child and friends.</h2>
+              </div>
+              <div class="col-md-3 col-sm-3 col-xs-12 col-height">
+                <a href="" class="happykiddo-btn">OUR SERVICES</a>
+              </div>
+            </div>
+          </div>
+        </div><!-- END CTA -->
+        <div class="who-we-are-section2 section-padding paddingb-0 clearfix">
+          <div class="container clearfix">
+            <div class="row-height">
+              <div class="col-md-8 col-sm-8 col-xs-12 col-height">
+                <h2 class="section-heading"><span class="red">Who</span> We Are?</h2>
+                <p class="marginb-40">We are Fete!! We Specialize in professionnal and private event organization in the New York Metropolitan region. Fete gets on board from conception to realization of your project</strong> …<br><br>
+Our professionnal team puts at your disposal their competences, creativity, and experiences to make your event a definite success.<br><br>We offer a variety of different packages that include something for every budget.</p>                
+                <div class="counter-section2 row text-center marginb-60 clearfix">
+                  <div class="col-md-3 col-md-3 col-md-12">
+                    <div class="counters">
+                      <div class="statsbar text-center article">
+                        <div class="stat-symbol-before green" ></div>
+                        <div class="stat-number green clearfix" data-from="0" data-to="80" data-speed="2000"></div>
+                        <div class="stat-symbol-after green" >+</div>
+                        <div class="stat-title">
+                          <h3>Clients</h3>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-md-3 col-md-12">
+                    <div class="counters">
+                      <div class="statsbar text-center article">
+                        <div class="stat-symbol-before orange" ></div>
+                        <div class="stat-number orange clearfix" data-from="0" data-to="169" data-speed="2000"></div>
+                        <div class="stat-symbol-afte oranger" ></div>
+                        <div class="stat-title">
+                          <h3>Parties</h3>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-md-3 col-md-12">
+                    <div class="counters">
+                      <div class="statsbar text-center article">
+                        <div class="stat-symbol-before yellow" ></div>
+                        <div class="stat-number yellow clearfix" data-from="0" data-to="500" data-speed="2000"></div>
+                        <div class="stat-symbol-after yellow" >+</div>
+                        <div class="stat-title">
+                          <h3>Guests</h3>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-md-3 col-md-12">
+                    <div class="counters">
+                      <div class="statsbar text-center article">
+                        <div class="stat-symbol-before blue" ></div>
+                        <div class="stat-number blue clearfix" data-from="0" data-to="99" data-speed="2000"></div>
+                        <div class="stat-symbol-after blue" >%</div>
+                        <div class="stat-title">
+                          <h3>Successful..</h3>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- END .counter-section -->
+              </div>
+              <div class="col-md-3 col-sm-3 col-xs-12 col-height">
+                <img src="./static/images/fete_about_01.jpg" class="img-responsive center-block" alt="">
+              </div>
+            </div>
+          </div><!-- END .container -->
+        </div><!-- END .who-we-are-section -->
+
+        <div class="section-info our_parties-section2 text-center clearfix">
+          <h2 class="section-heading">Our <span class="red">Parties</span></h2>
+          <p>Looking for a service that fits your budget?<br>We've got your back. With experience party planners and ton's of experience, we will throw your child a party they will remember for life!!</p>
+          <div class="blog-layout3-section container clearfix margint-40">
+              <div class="col-blog-layout3">
+                <div class="blog-layout3 sticky-post clearfix">
+                  <div class="col-blog-layout3-img">
+                    <div class="blog-layout3-img cover-fix clearfix" style="background-image: url('images/happykiddo_860x460.jpg');">
+                      <div class="mask text-center">
+                        <a href="#">
+                          <div class="mask-btn">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <span>view more</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!-- end .col-blog-layout3-img -->
+                  <div class="blog-layout3-info clearfix text-center">
+                    <img src="./static/images/happykiddo_services-icon.png" alt="">
+                    <h2 class="text-upper"><a href="">Premium Package</a></h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <a href="" class="transparent-btn happykiddo-btn">VIEW MORE</a>
+                  </div><!-- end .blog-layout3-info -->
+                </div><!-- end .blog-layout3-img -->
+              </div><!-- end .col-blog-layout3 -->
+              <div class="col-blog-layout3">
+                <div class="blog-layout3 clearfix">
+                  <div class="col-blog-layout3-img">
+                    <div class="blog-layout3-img cover-fix clearfix" style="background-image: url('images/happykiddo_860x460.jpg');">
+                      <div class="mask text-center">
+                        <a href="#">
+                          <div class="mask-btn">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <span>view more</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!-- end .col-blog-layout3-img -->
+                  <div class="blog-layout3-info clearfix text-center">
+                    <img src="./static/images/happykiddo_services-icon.png" alt="">
+                    <h2 class="text-upper"><a href="">Delux Package</a></h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <a href="" class="transparent-btn happykiddo-btn">VIEW MORE</a>
+                  </div><!-- end .blog-layout3-info -->
+                </div><!-- end .blog-layout3-img -->
+              </div><!-- end .col-blog-layout3 --> 
+              <div class="col-blog-layout3">
+                <div class="blog-layout3 clearfix">
+                  <div class="col-blog-layout3-img">
+                    <div class="blog-layout3-img cover-fix clearfix" style="background-image: url('images/happykiddo_860x460.jpg');">
+                      <div class="mask text-center">
+                        <a href="#">
+                          <div class="mask-btn">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <span>view more</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!-- end .col-blog-layout3-img -->
+                  <div class="blog-layout3-info clearfix text-center">
+                    <img src="./static/images/happykiddo_services-icon.png" alt="">
+                    <h2 class="text-upper"><a href="">Standard Package</a></h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <a href="" class="transparent-btn happykiddo-btn">VIEW MORE</a>
+                  </div><!-- end .blog-layout3-info -->
+                </div><!-- end .blog-layout3-img -->
+              </div><!-- end .col-blog-layout3 -->    
+            </div><!-- end .blog-layout3-section -->
+        </div><!-- END .our_parties-section2 -->
+
+        <div class="cta blue-bg margint-30 clearfix">
+          <div class="container clearfix">
+            <div class="row-height">
+              <div class="col-md-9 col-sm-9 col-xs-12 col-height">
+                <h2>Our birthday director will help you plan your party<br> every step of the way up to the day of your event!</h2>
+              </div>
+              <div class="col-md-3 col-sm-3 col-xs-12 col-height">
+                <a href="" class="happykiddo-btn">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div><!-- END CTA -->
+
+        <div class="section-info steps-section section-padding paddingt-0 row-height text-center clearfix">
+          <div class="first-row clearfix">
+            <div class="container">
+              <div class="row-height">
+                <div class="steps-info col-height col-md-4 col-sm-4 col-xs-12">
+                  <h2>1. Choose Your Date</h2>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the...</p>
+                  <img src="./static/images/happykiddo_steps1-icon.png" class="img-responsive center-block" alt="">
+                  <img src="./static/images/happykiddo_steps-arrow1.png" class="steps-arrow arrow1 hidden-xs img-responsive center-block" alt="">
+                </div>
+                <div class="steps-img col-height col-md-4 col-sm-4 col-xs-12">
+                  <div class="steps-quote scroll-zoomIn">
+                    <div>“It's as easy<br>as <span>1-2-3-4</span>”</div>
+                  </div>
+                  <img src="./static/images/fete_clown1.png" class="img-responsive center-block scroll-fadeInDown" alt="">
+                </div>
+                <div class="steps-info col-height col-md-4 col-sm-4 col-xs-12">
+                  <h2>2. Choose Your Guests</h2>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the...</p>
+                  <img src="./static/images/happykiddo_steps2-icon.png" class="img-responsive center-block" alt="">
+                  <img src="./static/images/happykiddo_steps-arrow2.png" class="steps-arrow hidden-xs arrow2 img-responsive center-block" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="second-row clearfix">
+            <div class="container">
+              <div class="row-height">
+                <div class="steps-info col-height col-md-4 col-sm-4 col-xs-12">
+                  <h2>4. Let Us  Take Care Of  The Rest</h2>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the...</p>
+                  <img src="./static/images/happykiddo_steps4-icon.png" class="img-responsive center-block" alt="">
+                </div>
+                <div class="steps-img col-height col-md-4 col-sm-4 col-xs-12">
+                  <img src="./static/images/fete_clown2.png" class="img-responsive center-block scroll-fadeInUp" alt="">
+                  <img src="./static/images/happykiddo_steps-arrow4.png" class="steps-arrow arrow4 img-responsive center-block" alt="">
+                </div>
+                <div class="steps-info col-height col-md-4 col-sm-4 col-xs-12">
+                  <h2>3. Make It Your Own</h2>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the...</p>
+                  <img src="./static/images/happykiddo_steps3-icon.png" class="img-responsive center-block" alt="">
+                  <img src="./static/images/happykiddo_steps-arrow3.png" class="steps-arrow arrow3 hidden-xs img-responsive center-block" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- END .steps-section -->
+
+        <div class="section-info section-padding paddingb-80 our_entertaiment text-center clearfix bg-image" style="background-image: url('images/fete_ent_bg.jpg');">
+          <div class="container">
+            <h2 class="section-heading paddingt-80">Our <span class="red">Entertaiments</span></h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown..</p>
+            <div class="features2 margint-50 marginb-50 clearfix">
+              <div class="col-md-3 col-sm-3 col-xa-12">
+                <div class="col-features2 marginb-30 text-center clearfix">   
+                  <div class="article-icon">     
+                    <!-- If you want to use font-awesome icon -->
+                    <div class="icon clearfix">
+                      <i class="fa fa-star-o fa-icon green-bg"></i>
+                    </div>
+                    <!-- If you want to use image icon 
+                    <div class="img-icon clearfix">
+                      <div class="img-icon-circle blue-bg">
+                        <img width="40" height="40" src="images/features2-img-icon.png" alt="" class="img-responsive center-block">
+                      </div>
+                    </div>-->
+                  </div>
+                  <div class="article-body">
+                    <h3>Creative workshop</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</p>
+                  </div>                              
+                </div><!-- END .col-features2 -->
+                <div class="col-features2 text-center clearfix">   
+                  <div class="article-icon">     
+                    <!-- If you want to use font-awesome icon -->
+                    <div class="icon clearfix">
+                      <i class="fa fa-star-o fa-icon blue-bg"></i>
+                    </div>
+                    <!-- If you want to use image icon 
+                    <div class="img-icon clearfix">
+                      <div class="img-icon-circle blue-bg">
+                        <img width="40" height="40" src="images/features2-img-icon.png" alt="" class="img-responsive center-block">
+                      </div>
+                    </div>-->
+                  </div>
+                  <div class="article-body">
+                    <h3>Magicians and Mentalists</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</p>
+                  </div>                              
+                </div><!-- END .col-features2 -->
+              </div><!-- END .col-md-3 -->
+              <div class="col-md-3 col-sm-3 col-xa-12">
+                <div class="col-features2 marginb-30 text-center clearfix">   
+                  <div class="article-icon">     
+                    <!-- If you want to use font-awesome icon -->
+                    <div class="icon clearfix">
+                      <i class="fa fa-star-o fa-icon orange-bg"></i>
+                    </div>
+                    <!-- If you want to use image icon 
+                    <div class="img-icon clearfix">
+                      <div class="img-icon-circle blue-bg">
+                        <img width="40" height="40" src="images/features2-img-icon.png" alt="" class="img-responsive center-block">
+                      </div>
+                    </div>-->
+                  </div>
+                  <div class="article-body">
+                    <h3>Balloon Artist</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</p>
+                  </div>                              
+                </div><!-- END .col-features2 -->
+                <div class="col-features2 text-center clearfix">   
+                  <div class="article-icon">     
+                    <!-- If you want to use font-awesome icon -->
+                    <div class="icon clearfix">
+                      <i class="fa fa-star-o fa-icon red-bg"></i>
+                    </div>
+                    <!-- If you want to use image icon 
+                    <div class="img-icon clearfix">
+                      <div class="img-icon-circle blue-bg">
+                        <img width="40" height="40" src="images/features2-img-icon.png" alt="" class="img-responsive center-block">
+                      </div>
+                    </div>-->
+                  </div>
+                  <div class="article-body">
+                    <h3>Clowns/Jugglers</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</p>
+                  </div>                              
+                </div><!-- END .col-features2 -->
+              </div><!-- END .col-md-3 -->
+              <div class="col-md-3 col-sm-3 col-xa-12">
+                <img src="./static/images/fete_ballons.jpg" alt="" class="img-responsive center-block">
+              </div><!-- END .col-md-3 -->
+              <div class="col-md-3 col-sm-3 col-xa-12">
+                <div class="col-features2 text-center clearfix">   
+                  <div class="article-icon">     
+                    <!-- If you want to use font-awesome icon -->
+                    <div class="icon clearfix">
+                      <i class="fa fa-star-o fa-icon yellow-bg"></i>
+                    </div>
+                    <!-- If you want to use image icon 
+                    <div class="img-icon clearfix">
+                      <div class="img-icon-circle blue-bg">
+                        <img width="40" height="40" src="images/features2-img-icon.png" alt="" class="img-responsive center-block">
+                      </div>
+                    </div>-->
+                  </div>
+                  <div class="article-body">
+                    <h3>Candy Bar</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</p>
+                  </div>                              
+                </div><!-- END .col-features2 -->
+                <div class="col-features2 marginb-30 text-center clearfix">   
+                  <div class="article-icon">     
+                    <!-- If you want to use font-awesome icon -->
+                    <div class="icon clearfix">
+                      <i class="fa fa-star-o fa-icon" style="background-color:#b1c009;"></i>
+                    </div>
+                    <!-- If you want to use image icon 
+                    <div class="img-icon clearfix">
+                      <div class="img-icon-circle blue-bg">
+                        <img width="40" height="40" src="images/features2-img-icon.png" alt="" class="img-responsive center-block">
+                      </div>
+                    </div>-->
+                  </div>
+                  <div class="article-body">
+                    <h3>Make Up</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</p>
+                  </div>                              
+                </div><!-- END .col-features2 -->
+              </div><!-- END .col-md-3 -->
+            </div><!-- END .features2 -->
+          </div>
+        </div>
+
+        <div class="cta blue-bg marginb-20 clearfix">
+          <div class="container clearfix">
+            <div class="row-height">
+              <div class="col-md-9 col-sm-9 col-xs-12 col-height">
+                <h2>We create the atmosphere you wish to offer to your child and friends.</h2>
+              </div>
+              <div class="col-md-3 col-sm-3 col-xs-12 col-height">
+                <a href="" class="happykiddo-btn">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div><!-- END CTA -->
+
+        <div class="section-info our_team2 section-padding container text-center clearfix">
+          <h2 class="section-heading">Our <span class="red">Team</span></h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's<br> standard dummy text ever since the 1500s, when an unknown printer took a galley<br> of type and scrambled it to make a type specimen book.</p>
+          <div class="team2 margint-50 clearfix">
+            <div class="col-team col-md-3 col-sm-3 col-xs-12">
+              <div class="team2-circle clearfix">
+                <div class="team2-img scroll-zoomIn">
+                  <div class="team2-border">
+                    <div class="team2-img_box" style="background-image: url('images/hari.jpg');">      
+                      <div class="mask text-center">
+                        <a href=""></a>
+                        <div class="mask-btn">
+                          <h3>Harikrishnan G Nair</h3>
+                          <div class="position red">- Front-end Developer/Project Manager -</div>
+                          <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        </div>
+                      </div><!-- end .mask -->
+                    </div><!-- end .team2-img_box -->
+                  </div><!-- end .team2-border -->
+                </div><!-- end .team-img -->
+              </div><!-- end .team2-circle -->
+            </div><!-- end .col-team -->
+
+            <div class="col-team col-md-3 col-sm-3 col-xs-12">
+              <div class="team2-circle clearfix">
+                <div class="team2-img scroll-zoomIn">
+                  <div class="team2-border">
+                    <div class="team2-img_box" style="background-image: url('images/sahir.jpg');">      
+                      <div class="mask text-center">
+                        <a href=""></a>
+                        <div class="mask-btn">
+                          <h3>Sahir Karani</h3>
+                          <div class="position red">- Back-end Developer -</div>
+                          <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        </div>
+                      </div><!-- end .mask -->
+                    </div><!-- end .team2-img_box -->
+                  </div><!-- end .team2-border -->
+                </div><!-- end .team-img -->
+              </div><!-- end .team2-circle -->
+            </div><!-- end .col-team -->
+
+            <div class="col-team col-md-3 col-sm-3 col-xs-12">
+              <div class="team2-circle clearfix">
+                <div class="team2-img scroll-zoomIn">
+                  <div class="team2-border">
+                    <div class="team2-img_box" style="background-image: url('images/Kshitija.jpg');">      
+                      <div class="mask text-center">
+                        <a href=""></a>
+                        <div class="mask-btn">
+                          <h3>Kshitija Deshmukh</h3>
+                          <div class="position red">- Front-End Developer -</div>
+                          <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        </div>
+                      </div><!-- end .mask -->
+                    </div><!-- end .team2-img_box -->
+                  </div><!-- end .team2-border -->
+                </div><!-- end .team-img -->
+              </div><!-- end .team2-circle -->
+            </div><!-- end .col-team -->
+
+            <div class="col-team col-md-3 col-sm-3 col-xs-12">
+              <div class="team2-circle clearfix">
+                <div class="team2-img scroll-zoomIn">
+                  <div class="team2-border">
+                    <div class="team2-img_box" style="background-image: url('images/Akshay.jpg');">      
+                      <div class="mask text-center">
+                        <a href=""></a>
+                        <div class="mask-btn">
+                          <h3>Akshay Narvekar</h3>
+                          <div class="position red">- Front-End Developer -</div>
+                          <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        </div>
+                      </div><!-- end .mask -->
+                    </div><!-- end .team2-img_box -->
+                  </div><!-- end .team2-border -->
+                </div><!-- end .team-img -->
+              </div><!-- end .team2-circle -->
+            </div><!-- end .col-team -->
+
+            <div class="col-team col-md-3 col-sm-3 col-xs-12">
+              <div class="team2-circle clearfix">
+                <div class="team2-img scroll-zoomIn">
+                  <div class="team2-border">
+                    <div class="team2-img_box" style="background-image: url('images/Pallak.jpg');">      
+                      <div class="mask text-center">
+                        <a href=""></a>
+                        <div class="mask-btn">
+                          <h3>Pallak Anand</h3>
+                          <div class="position red">- Back-End Developer/Project Manager -</div>
+                          <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        </div>
+                      </div><!-- end .mask -->
+                    </div><!-- end .team2-img_box -->
+                  </div><!-- end .team2-border -->
+                </div><!-- end .team-img -->
+              </div><!-- end .team2-circle -->
+            </div><!-- end .col-team -->
+          </div><!-- END .team2 -->
+        </div><!-- END section-team2 -->
+
+        <div class="section-info section-info2 margint-10 row-height text-center clearfix">
+          <div class="circle-line circle-line-top circle-line1"></div>
+          <div class="container clearfix">
+            <div class="col-md-7 col-sm-7 col-xs-12 col-height">
+              <h2 class="text-upper scroll-fadeInDown">We create <span class="atma-span" style="color: #e9fed3">the atmosphere</span> you wish<br> to offer to your child and friends.</h2>
+              <div class="text-center btn-box clearfix scroll-fadeInUp">
+                <a href="" class="transparent-btn happykiddo-btn">ABOUT US</a>
+                <a href="" class="filled-btn happykiddo-btn">BOOK NOW</a>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-12 col-height paddingt-30">
+              <img src="./static/images/fete_atm.png" width="400" alt="" class="img-responsive center-block">
+            </div>
+          </div>
+        </div><!--END .section-info1 -->
+
+        <div class="section-info testimonials2-section_in yellow-bg section-padding margint-0 clearfix cover">
+          <div class="circle-line circle-line-top circle-line1"></div>
+          <div class="section-info margint-30 testimonials-section clearfix">
+            <h2 class="section-heading text-center"><span class="red">Testimonials</span> of Happy Parents</h2>
+            <div class="row clearfix">
+              <span class="description col-md-8 col-md-offset-2 text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text <br> ever since the 1500s, when an unknown ..</span>
+            </div>
+            <div class="testimonials1-section container margint-40 clearfix">
+              <div class="col-testimonials1 col-md-4 col-sm-4 col-xs-12">
+                <div class="testimonials1 scroll-fadeIn">
+                  <div class="tesimonials1-head">
+                    <p><img src="./static/images/happykiddo_tesimonials1-quote.png" class="img-responsive" alt="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb- led it to make a type specimen book.</p>
+                  </div>
+                  <div class="tesimonials1-foot">
+                    <img width="50" src="images/happykiddo_210x210.jpg" class="img-responsive" alt="">
+                    <div class="name">Leon Thompson</div>
+                    <div class="type-party">Seventh Birthday</div>
+                  </div>
+                </div>  
+              </div><!-- END .col-testimonials1 -->
+
+              <div class="col-testimonials1 col-md-4 col-sm-4 col-xs-12">
+                <div class="testimonials1 scroll-fadeIn">
+                  <div class="tesimonials1-head">
+                    <p><img src="./static/images/happykiddo_tesimonials1-quote.png" class="img-responsive" alt="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb- led it to make a type specimen book.</p>
+                  </div>
+                  <div class="tesimonials1-foot">
+                    <img width="50" src="images/happykiddo_210x210.jpg" class="img-responsive" alt="">
+                    <div class="name">Leon Thompson</div>
+                    <div class="type-party">Seventh Birthday</div>
+                  </div>
+                </div>  
+              </div><!-- END .col-testimonials1 -->
+
+              <div class="col-testimonials1 col-md-4 col-sm-4 col-xs-12">
+                <div class="testimonials1 scroll-fadeIn">
+                  <div class="tesimonials1-head">
+                    <p><img src="./static/images/happykiddo_tesimonials1-quote.png" class="img-responsive" alt="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb- led it to make a type specimen book.</p>
+                  </div>
+                  <div class="tesimonials1-foot">
+                    <img width="50" src="images/happykiddo_210x210.jpg" class="img-responsive" alt="">
+                    <div class="name">Leon Thompson</div>
+                    <div class="type-party">Seventh Birthday</div>
+                  </div>
+                </div>  
+              </div><!-- END .col-testimonials1 -->
+            </div><!-- END .testimonials1-section -->
+          </div><!-- END .testimonials-section -->
+        </div><!-- END .testimonials2-section_in -->
+        
+        <div class="cta blue-bg clearfix">
+          <div class="container clearfix">
+            <div class="row-height">
+              <div class="col-md-9 col-sm-9 col-xs-12 col-height">
+                <h2>We create the atmosphere you wish to offer to your child and friends.</h2>
+              </div>
+              <div class="col-md-3 col-sm-3 col-xs-12 col-height">
+                <a href="" class="happykiddo-btn">OUR SERVICES</a>
+              </div>
+            </div>
+          </div>
+        </div><!-- END CTA -->
+
+        <div class="section-info booking-section clearfix">
+          <div class="section-info section-info1 text-center clearfix">
+            <div class="container text-center clearfix">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <h2 class="text-upper">We create <span class="atma-span green">the atmosphere</span> you wish<br> to offer to your child and friends.</h2>
+                <img src="./static/images/fete_book.png" alt="" class="">
+              </div>
+            </div>
+          </div><!--END .section-info1 -->
+          <div class="booking-form">
+            <div class="container">
+              <h2 class="section-heading text-center">Party <span>Booking</span> Form</h2>
+              <p  class="text-center">Please fill out the Party Enquiry Form below. We will try to answer your<br>enquiry as quick as possible.</p>
+              <form class="booking margint-30 clearfix">
+                <div class="row clearfix">
+                  <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                    <label>Your Name <span class="red">*</span></label>
+                    <input type="text" class="form-control" placeholder="Your Name">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                    <label>Your Email <span class="red">*</span></label>
+                    <input type="email" class="form-control" placeholder="Your Email">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                    <label>Your Phone <span class="red">*</span></label>
+                    <input type="number" class="form-control" placeholder="Your Phone">
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                    <label>Home Town <span class="red">*</span></label>
+                    <input type="text" class="form-control" placeholder="Home Town">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                    <label>Child Name(s) <span class="red">*</span></label>
+                    <input type="text" class="form-control" placeholder="Child Name(s)">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                    <label>Childs Age <span class="red">*</span></label>
+                    <input type="text" class="form-control" placeholder="Childs Age">
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                    <label>Date of Party <span class="red">*</span></label>
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-calendar">
+                        </i>
+                      </div>
+                      <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                    <label>Package <span class="red">*</span></label>
+                    <select class="form-control">
+                      <option>Premium Package</option>
+                      <option>Delux Package</option>
+                      <option>Standard Package</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                    <label>Preferred Time of Party *<span class="red">*</span></label>
+                    <input type="text" class="form-control"  placeholder="13:00 - 18:00">
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <div class="row clearfix">
+                  <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <label>Additional Information?</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="row clearfix btn-row">
+                  <button type="submit" class="btn btn-default">    Book    </button>
+                  <img class="form-arrow" src="images/happykiddo_form-arrow.png" alt="">
+                </div>
+              </form>
+            </div><!-- end .container -->
+          </div><!-- end .booking-form -->
+        </div><!-- end .booking-section -->
+    
+      </div> <!-- END #main -->
+      <footer class="footer-modern-bg" style="background-image: url('images/fete_foot_bg.jpg');">
+        <div class="container">
+          <div class="first-row clearfix">
+            <div class="footer-widget contact-widget col-md-4 col-sm-4 col-xs-12">
+              <h2>GET IN TOUCH</h2>
+              <p class="description">If you would like more information on our packages or would like to discuss ideas or if you would like to just give us some feedback, feel free to reach out to us at: </p>
+              <div class="contacts">
+                <div><i class="fa fa-map-marker" aria-hidden="true"></i>6 Metrotech, Brooklyn, New York, NY 11201, United States</div>
+                <div><i class="fa fa-phone" aria-hidden="true"></i>(1)347-220-5251</div>
+                <div><i class="fa fa-envelope-o" aria-hidden="true"></i>support@fete.com</div>
+              </div>
+              <h2 class="margint-30">WE ARE SOCIAL</h2>
+              <ul class="social-links clearfix">
+                <li class="social">
+                  <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="social">
+                  <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="social">
+                  <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li class="social">
+                  <a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+                </li>
+                </ul>
+            </div><!-- end .footer-widget.contact-widget -->
+            <div class="footer-widget col-md-4 col-sm-4 col-xs-12">
+              <h2>USEFULL LINKS</h2>
+              <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </div><!-- end .footer-widget -->
+            <div class="footer-widget recent-works-widget col-md-4 col-sm-4 col-xs-12">
+              <h2>OUT PARTY PHOTOS</h2>
+              <div class="row clearfix">
+                <div class="recent-works-col col-md-4">
+                  <div class="img-box">
+                    <img src="./static/images/happykiddo_860x460.jpg" alt="">
+                    <div class="mask text-center">
+                      <a href="#">
+                        <div class="mask-btn">
+                          <i class="fa fa-eye" aria-hidden="true"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="recent-works-col col-md-4">
+                  <div class="img-box">
+                    <img src="./static/images/happykiddo_860x460.jpg" alt="">
+                    <div class="mask text-center">
+                      <a href="#">
+                        <div class="mask-btn">
+                          <i class="fa fa-eye" aria-hidden="true"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="recent-works-col col-md-4">
+                  <div class="img-box">
+                    <img src="./static/images/happykiddo_860x460.jpg" alt="">
+                    <div class="mask text-center">
+                      <a href="#">
+                        <div class="mask-btn">
+                          <i class="fa fa-eye" aria-hidden="true"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="recent-works-col col-md-4">
+                  <div class="img-box">
+                    <img src="./static/images/happykiddo_860x460.jpg" alt="">
+                    <div class="mask text-center">
+                      <a href="#">
+                        <div class="mask-btn">
+                          <i class="fa fa-eye" aria-hidden="true"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="recent-works-col col-md-4">
+                  <div class="img-box">
+                    <img src="./static/images/happykiddo_860x460.jpg" alt="">
+                    <div class="mask text-center">
+                      <a href="#">
+                        <div class="mask-btn">
+                          <i class="fa fa-eye" aria-hidden="true"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="recent-works-col col-md-4">
+                  <div class="img-box">
+                    <img src="./static/images/happykiddo_860x460.jpg" alt="">
+                    <div class="mask text-center">
+                      <a href="#">
+                        <div class="mask-btn">
+                          <i class="fa fa-eye" aria-hidden="true"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>            
+              </div>
+            </div><!-- end .footer-widget.recent-works-widget -->
+          </div><!-- end .first-row -->
+          <div class="second-row clearfix">
+            <div class="container">
+              <div class="search-form">
+                <form method="get" id="search-form-header" action="#">
+                  <input type="search" name="s" id="search" placeholder="Search" value="">
+                </form>
+              </div>
+              <div class="text-right copyright">
+                <p>© Copyright 2017 Fete party planning services. All Rights Reserved</p>
+              </div>
+            </div>
+          </div><!-- end .second-row -->
+        </div><!-- end .container -->
+      </footer>
+      <a href="#0" class="scroll-page back-to-top">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+      </a>
+    </div><!-- END WRAPPER -->    
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/custom.js"></script>
+    <script src="./static/js/stat-counter.js"></script>
+  </body>
 </html>

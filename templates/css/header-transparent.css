@@ -1,0 +1,544 @@
+/* ----------------------------------------------------------------
+   Header-transparent Styles
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+   Nav Top bar
+-----------------------------------------------------------------*/
+
+.header-transparent .nav-top {
+  color: #ffffff;
+  background-color: #f34235;
+  font-size: 12px;
+  min-height: 29px;
+}
+.header-transparent .nav-top .text {
+  padding: 5px;
+  float: left;
+  display: inline-block;
+}
+.header-transparent .nav-top .contacts {
+  padding: 5px;
+  float: right;
+  display: inline-block;
+}
+.header-transparent .nav-top .contacts span {
+  margin-right: 20px;
+}
+.header-transparent .nav-top .contacts span i {
+  margin-right: 5px;
+}
+.header-transparent .nav-top .social,
+.header-transparent .nav-top .button {
+  float: right;
+  display: inline-block;
+}
+.header-transparent .nav-top .social,
+.header-transparent .nav-top .text {
+  padding: 5px;
+}
+.header-transparent .nav-top .social span {
+  margin-right: 5px;
+}
+.header-transparent .nav-top .social ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+}
+.header-transparent .nav-top .social ul li {
+  display: inline-block;
+  font-size: 13px;
+  padding: 0 4px;
+}
+.header-transparent .nav-top .social ul li a {
+  color: #f5f5f5;
+}
+.header-transparent .nav-top .button a {
+  text-transform: uppercase;
+  color: #f34235;
+  background-color: #ffffff;
+  height: 19px;
+  display: inline-table;
+  padding: 2px 15px;
+  line-height: 19px;
+  font-weight: 700;
+  margin: 3px 0 0 10px;
+  font-size: 10px;
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header-transparent .nav-top .button a:before {
+  content: "\f061";
+  color: #f34235;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  font-size: 13px;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header-transparent .nav-top .button span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.3s;
+  -moz-backface-visibility: hidden;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+.header-transparent .nav-top .button a:hover,
+.header-transparent .nav-top .button a:active,
+.header-transparent .nav-top .button a:visited {
+  color: #fff !important;
+  text-decoration: none;
+}
+.header-transparent .nav-top .button a:hover span {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.header-transparent .nav-top .button a:hover:before {
+  top: 1.4px;
+  color: #red;
+  text-decoration: none;
+}
+.header-transparent .nav-top .navbar-nav {
+  float: left !important;
+  display: inline-block;
+  padding: 4px;
+  margin-right: 30px;
+}
+.header-transparent .nav-top .navbar-nav li {
+  margin-right: 10px;
+}
+.header-transparent .nav-top .navbar-nav li a {
+  padding: 0;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.header-transparent .nav-top .navbar-nav li a:hover {
+  text-decoration: none;
+}
+.header-transparent.header-sticky .nav-top {
+  display: none;
+}
+@media (max-width: 767px) {
+  .header-transparent .nav-top {
+    display: none;
+  }
+}
+.hkiddo-logo {
+  padding-top: 25px;
+}
+.hkiddo-logo-sticky {
+  display: none;
+}
+.header-top {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #f1f1f1;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* ----------------------------------------------------------------
+   Header Top Transparent Image
+-----------------------------------------------------------------*/
+
+.header-bottom {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.header-bottom .hero {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  z-index: 3;
+  color: #fff;
+  font-size: 13px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
+  -webkit-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+.header-tpo .hero h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 44px;
+}
+.header-tpo .hero h1 span {
+  font-family: 'Atma', cursive;
+}
+
+/* ----------------------------------------------------------------
+   Buttons on Slider 1
+-----------------------------------------------------------------*/
+
+.header-bottom .hero .filled-btn {
+  text-shadow: none;
+  color: #f34235;
+}
+.header-bottom .hero .filled-btn:before {
+  background-color: #f34235;
+}
+.header-bottom .hero .transparent-btn:hover,
+.header-bottom .hero .transparent-btn:focus,
+.header-bottom .hero .transparent-btn:active {
+  color: #f34235;
+  text-shadow: none;
+}
+.header-bottom .hero .filled-btn:hover {
+  color: #fff;
+}
+.header-bottom .circle-line {
+  bottom: 0;
+  top: inherit;
+}
+.btn.btn-lg {
+  padding: 10px 40px;
+}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+  color: #f5f5f5;
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  outline: none;
+  margin: 20px auto;
+}
+
+.header-transparent .navbar-brand {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .header-transparent .navbar-nav > li > a {
+    padding-top: 17px !important;
+    padding-bottom: 17px !important;
+  }
+}
+.header-transparent.header-sticky .navbar-nav > li > a {
+  padding-bottom: 22px !important;
+}
+.header-transparent .caret {
+  margin-left: 5px;
+}
+@media (min-width: 768px) {
+  .header-transparent nav li {
+    position: relative;
+  }
+  .header-transparent nav ul li ul li .caret {
+    display: inline-block;
+    margin-left: 4px;
+    color: #f34235;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 5px;
+    top: 13px;
+    vertical-align: middle;
+    background: url(../images/happykiddo_footer-list-style.png) -42px 0 no-repeat;
+    border: 0;
+    width: 14px;
+    height: 17px;
+  }
+  .header-transparent nav ul li ul li:hover .caret {
+    background: url(../images/happykiddo_footer-list-style.png) -69px 0 no-repeat;
+  }
+  .header-transparent nav li:hover > .dropdown-submenu {
+    top: 0;
+    left: 100%;
+    margin-left: 0px;
+    -webkit-border-radius: 0;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .header-transparent .dropdown-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #303841;
+    opacity: .95;
+  }
+  .header-transparent .dropdown-submenu li a {
+    text-transform: none;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 3px 20px;
+    white-space: nowrap;
+  }
+  .header-transparent .dropdown-menu,
+  .header-transparent .dropdown-submenu {
+    display: inherit !important;
+  }
+  .header-transparent .nav > li > a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #f34235;
+    content: '';
+    opacity: 0;
+    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  .header-transparent .nav > li > a:hover::after,
+  .header-transparent .nav > li > a:focus::after {
+    height: 2px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+.header-transparent .dropdown-submenu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  line-height: 1.42857143;
+}
+.header-transparent .header-bottom .logo-box {
+  text-align: center;
+}
+.hkiddo-nav {
+  background: 0 0;
+  position: relative;
+  border: none;
+  margin: 0;
+  z-index: 1000;
+}
+.hkiddo-nav ul li a {
+  color: #313131;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 100;
+}
+.hkiddo-nav ul li .dropdown-menu {
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding: 0;
+  background: #ffffff url(../images/happykiddo_menu-bg.png) top right repeat-y;
+}
+.hkiddo-nav ul li .dropdown-submenu {
+  -webkit-border-radius: 5px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius: 5px;
+  -moz-border-radius-topleft: 0;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding: 0;
+  background: #ffffff url(../images/happykiddo_menu-bg.png) top right repeat-y;
+}
+.hkiddo-nav ul li .dropdown-menu li:last-child,
+.hkiddo-nav ul li .dropdown-submenu li:last-child {
+  border-bottom: 1px solid #f6f6f6;
+  padding: 0;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.hkiddo-nav ul li .dropdown-menu li:last-child,
+.hkiddo-nav ul li .dropdown-submenu li:last-child {
+  border-bottom: 0;
+}
+.hkiddo-nav ul li .dropdown-menu > li:last-child > a,
+.hkiddo-nav ul li .dropdown-submenu > li:last-child > a {
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.hkiddo-nav ul li .dropdown-menu li a,
+.hkiddo-nav ul li .dropdown-submenu li a {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 10px 30px 10px 15px;
+  color: #313131;
+  text-transform: none;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: -1px;
+}
+.hkiddo-nav ul li .dropdown-menu li a:hover,
+.hkiddo-nav ul li .dropdown-submenu li a:hover {
+  background-color: #f34235 !important;
+  color: #ffffff;
+}
+.hkiddo-nav ul li .dropdown-menu li a:hover:before,
+.hkiddo-nav ul li .dropdown-submenu li a:hover:before {
+  /*background: url(../images/footer-list-style.png) -69px 0 no-repeat;*/
+}
+.header-transparent .navbar-brand {
+  padding: 10px 0;
+}
+.header-transparent .navbar-default .navbar-nav > .active > a,
+.header-transparent .navbar-default .navbar-nav > .active > a:hover,
+.header-transparent .navbar-default .navbar-nav > .active > a:focus,
+.nav > li > a:hover,
+.nav > li > a:focus {
+  color: #f34235;
+  background-color: transparent;
+}
+.header-transparent .navbar-default .navbar-nav > .open > a,
+.header-transparent .navbar-default .navbar-nav > .open > a:hover,
+.header-transparent .navbar-default .navbar-nav > .open > a:focus {
+  background-color: transparent;
+}
+.header-transparent .nav > li:last-child > a {
+  padding-right: 0;
+}
+.header-transparent nav li:hover > .dropdown-menu {
+  visibility: visible;
+  /* shows sub-menu */
+  opacity: 1;
+  z-index: 1000;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
+}
+.header-transparent .dropdown-menu {
+  visibility: hidden;
+  /* hides sub-menu */
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(-2em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+.header-transparent nav li:hover > .dropdown-submenu {
+  visibility: visible;
+  /* shows sub-menu */
+  opacity: 1;
+  z-index: 999;
+  transform: translateX(0%);
+  transition-delay: 0s, 0s, 0.3s;
+}
+.header-transparent .dropdown-submenu {
+  visibility: hidden;
+  /* hides sub-menu */
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translateX(-2em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+.header-transparent .hkiddo-nav .collapse {
+  text-align: center;
+}
+.header-transparent .hkiddo-nav ul.navbar-nav {
+  display: inline-block;
+  float: none !important;
+  vertical-align: top;
+}
+.header-transparent.header-sticky .nav > li:last-child .dropdown-submenu {
+  top: 0;
+  left: auto;
+  right: 100%;
+}
+
+
+/* ----------------------------------------------------------------
+  Header Sticky
+-----------------------------------------------------------------*/
+
+.header-sticky {
+  height: 68px;
+  z-index: 10000;
+  position: fixed;
+  width: 100%;
+  padding: 5px 0;
+}
+.header-sticky .header-top {
+  background-color: rgba(255, 255, 255, 0.97);
+}
+.header-sticky .header-bottom,
+.header-sticky .hkiddo-logo {
+  display: none;
+}
+.header-sticky .header-top,
+.header-sticky .hkiddo-nav {
+  height: 100%;
+}
+.header-sticky .hkiddo-nav ul.navbar-nav {
+  padding-top: 9px;
+  float: right !important;
+}
+.header-sticky .hkiddo-logo-sticky {
+  display: block;
+  float: left;
+  padding-left: 15px;
+  height: 69px;
+}
+.header-sticky .hkiddo-logo-sticky img {
+  height: 47px;
+}

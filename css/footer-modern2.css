@@ -1,0 +1,175 @@
+/* ----------------------------------------------------------------
+   Footer Modern2 Styles
+-----------------------------------------------------------------*/
+
+.footer-modern2 {
+  min-height: 100px;
+  font-size: 12px;
+  line-height: 15px;
+  background-position: top left;
+  background-repeat: repeat;
+  color: #ffffff;
+  padding: 50px 0 0 0;
+  position: relative;
+}
+.footer-modern2 .footer-widget {
+  padding: 20px 40px 20px 40px;
+  background-color: #f34235;
+  position: relative;
+  top: -46px;
+}
+.footer-modern2 .heading-widget {
+  border-bottom: 45px solid #f34235;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  margin-bottom: 5px;
+  position: absolute;
+  top: -90px;
+  left: 0;
+  padding: 10px 20px 5px 20px;
+  z-index: 1000;
+}
+.footer-modern2 h2 {
+  font-size: 20px;
+  position: relative;
+  line-height: normal;
+  top: 60px;
+}
+.footer-modern2 ul {
+  padding: 0;
+}
+.footer-modern2 ul li {
+  list-style: none;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
+}
+.footer-modern2 ul li a {
+  color: #ffffff;
+}
+.footer-modern2 ul li a:before {
+  content: "";
+  background: url(../images/happykiddo_footer-list-style.png) 0 0 no-repeat;
+  width: 10px;
+  height: 15px;
+  position: absolute;
+  display: block;
+  left: 0;
+}
+.footer-modern2 ul li a:hover {
+  color: #fcc005;
+  text-decoration: none;
+}
+.footer-modern2 ul li a:hover:before {
+  background: url(../images/happykiddo_footer-list-style.png) -14px 0 no-repeat;
+}
+.footer-modern2 .contact-widget {
+  position: relative;
+  background-color: transparent;
+  padding: 0px 60px 0px 0px;
+  top: 0;
+  margin-bottom: 50px;
+}
+.footer-modern2 .contact-widget .contact-box {
+  background-color: #ffffff;
+  color: #313131;
+  border-radius: 5px;
+  padding: 30px 25px 20px 25px;
+  -ms-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  font-size: 13px;
+}
+.footer-modern2 .contact-widget .contact-box .pin {
+  position: absolute;
+  top: -26px;
+  right: 10px;
+  z-index: 100;
+}
+.footer-modern2 .contact-widget .contact-box img.logo {
+  margin-bottom: 25px;
+}
+.footer-modern2 .contact-widget .contact-box h2 {
+  color: #969696;
+  font-size: 17px;
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  top: 0;
+  left: 0;
+}
+.footer-modern2 .contact-widget .contact-box i {
+  margin-right: 10px;
+}
+.footer-modern2 .contact-widget .contact-box ul.social-links {
+  list-style: none;
+}
+.footer-modern2 .contact-widget .contact-box ul.social-links li {
+  padding-left: 0;
+  list-style-type: none;
+}
+.footer-modern2 .contact-widget .contact-box ul.social-links li a:before {
+  display: none;
+}
+.footer-modern2 .contact-widget .contact-box .contacts div {
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 21px;
+}
+.footer-modern2 .contact-widget .contact-box .contacts i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.footer-modern2 .contact-widget .contact-box .contacts i.fa-map-marker,
+.footer-modern2 .contact-widget .contact-box .contacts i.phone {
+  left: 2px;
+}
+.footer-modern2 .services-widget ul li {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 6px 11px;
+  margin-right: 4px;
+}
+.footer-modern2 .services-widget ul li a {
+  color: #ffffff;
+  padding-left: 20px;
+}
+.footer-modern2 .services-widget ul li a:hover:before {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.footer-modern2 .services-widget ul li a:before {
+  content: "";
+  background: url(../images/happykiddo_menu-flower-sm.png) 0 0 no-repeat;
+  width: 15px;
+  height: 16px;
+  position: absolute;
+  display: block;
+  left: 9px;
+  top: 5px;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+}
+.footer-modern2 .second-row .container {
+  position: relative;
+}
+.footer-modern2 .second-row .copyright-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 20px;
+  border-bottom: 37px solid #ffffff;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+.footer-modern2 .second-row .copyright-box .copyright {
+  font-size: 11px;
+  color: #313131;
+  text-transform: uppercase;
+  position: relative;
+  top: 40px;
+}
+/*# sourceMappingURL=footer-modern2.css.map */
