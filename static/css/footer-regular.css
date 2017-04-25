@@ -1,0 +1,263 @@
+/* ----------------------------------------------------------------
+   Footer-regular Styles
+-----------------------------------------------------------------*/
+
+.footer-regular {
+  min-height: 100px;
+  font-size: 12px;
+  line-height: 15px;
+}
+.footer-regular .first-row {
+  background-color: #1c717a;
+  padding: 60px 0 50px 0;
+  position: relative;
+  color: #ffffff;
+}
+.footer-regular .first-row .decor {
+  background: #6EAF8D;
+  background: -webkit-linear-gradient(left, #51b2bc 50%, #77cfd8 50%);
+  background: -moz-linear-gradient(left, #51b2bc 50%, #77cfd8 50%);
+  background: -o-linear-gradient(left, #51b2bc 50%, #77cfd8 50%);
+  background: linear-gradient(left, white 50%, #77cfd8 50%);
+  background-size: 50px 25%;
+  padding: 2px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.footer-regular .second-row {
+  background-color: #f1f1f1;
+  padding: 40px 0 30px 0;
+  color: #313131;
+}
+.footer-regular .second-row .logo-box {
+  vertical-align: top;
+  position: relative;
+}
+.footer-regular .second-row .logo-box img {
+  margin-top: 30px;
+}
+.footer-regular .second-row .logo-box .copyright {
+  position: absolute;
+  bottom: -20px;
+  padding-top: 10px;
+  font-size: 11px;
+}
+.footer-regular .second-row .contacts-box {
+  vertical-align: top;
+}
+.footer-regular .second-row .contacts-box .contacts {
+  color: #313131;
+  margin-top: 12px;
+}
+.footer-regular .second-row .contacts-box .contacts div {
+  margin-bottom: 10px;
+}
+.footer-regular .second-row .contacts-box .contacts i {
+  margin-right: 7px;
+}
+.footer-regular .second-row .social-box {
+  vertical-align: top;
+}
+.footer-regular .second-row .social-box ul {
+  padding: 0;
+}
+.footer-regular .second-row .social-box ul li {
+  display: inline-block;
+  padding-left: 0;
+}
+.footer-regular .second-row .social-box ul li a {
+  background-color: #1c717a;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  display: block;
+  z-index: 1;
+  position: relative;
+  border-radius: 5px;
+}
+.footer-regular .second-row .social-box ul li a:before {
+  display: none;
+}
+.footer-regular .second-row .social-box ul li a:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  background-color: #f34235;
+  border-radius: 5px;
+}
+.footer-regular .second-row .social-box ul li a:hover {
+  color: #ffffff;
+}
+.footer-regular .second-row .social-box ul li a:hover:after {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+.footer-regular .second-row .social-box ul li a.facebook,
+.footer-regular .second-row .social-box ul li a.twitter,
+.footer-regular .second-row .social-box ul li a.linkedin {
+  padding: 20px 0 19px 23px;
+}
+.footer-regular .second-row .social-box ul li a.googleplus {
+  padding: 20px 0 19px 23px;
+}
+.footer-regular .footer-widget {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.footer-regular h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.footer-regular ul {
+  padding: 0;
+}
+.footer-regular ul li {
+  list-style: none;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
+}
+.footer-regular ul li a {
+  color: #ffffff;
+}
+.footer-regular ul li a:before {
+  content: "";
+  background: url(../images/happykiddo_footer-list-style.png) 0 0 no-repeat;
+  width: 10px;
+  height: 15px;
+  position: absolute;
+  display: block;
+  left: 0;
+}
+.footer-regular ul li a:hover {
+  color: #fcc005;
+  text-decoration: none;
+}
+.footer-regular ul li a:hover:before {
+  background: url(../images/happykiddo_footer-list-style.png) -14px 0 no-repeat;
+}
+.footer-regular .services-widget ul li {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 6px 11px;
+  margin-right: 4px;
+}
+.footer-regular .services-widget ul li a {
+  color: #ffffff;
+  padding-left: 20px;
+}
+.footer-regular .services-widget ul li a:hover:before {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.footer-regular .services-widget ul li a:before {
+  content: "";
+  background: url(../images/happykiddo_menu-flower-sm.png) 0 0 no-repeat;
+  width: 15px;
+  height: 16px;
+  position: absolute;
+  display: block;
+  left: 9px;
+  top: 5px;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+}
+.footer-regular .recent-works-widget .row {
+  padding: 0 15px;
+}
+.footer-regular .recent-works-widget .recent-works-col {
+  padding: 5px;
+}
+.footer-regular .recent-works-widget .recent-works-col .img-box {
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+.footer-regular .recent-works-widget .recent-works-col .img-box img {
+  max-width: 130px;
+  min-height: 80px;
+  height: auto;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+}
+.footer-regular .recent-works-widget .recent-works-col .img-box .mask {
+  opacity: 0;
+  overflow: visible;
+  border: 0px solid rgba(0, 0, 0, 0.7);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  transition: all 0.35s ease-in;
+}
+.footer-regular .recent-works-widget .recent-works-col .img-box .mask a {
+  color: #ffffff;
+}
+.footer-regular .recent-works-widget .recent-works-col .img-box .mask a:hover {
+  text-decoration: none;
+}
+.footer-regular .recent-works-widget .recent-works-col .img-box .mask .mask-btn {
+  position: relative;
+  height: 100%;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 101;
+}
+.footer-regular .recent-works-widget .recent-works-col .img-box .mask .mask-btn i {
+  border-radius: 50%;
+  background-color: #f34235;
+  color: #ffffff;
+  padding: 10px;
+  margin-top: 24%;
+  margin-bottom: 5px;
+  font-size: 12px;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.footer-regular .recent-works-widget .recent-works-col .img-box .mask .mask-btn span {
+  display: block;
+  font-size: 12px;
+}
+.footer-regular .recent-works-widget .recent-works-col .img-box:hover .mask {
+  opacity: 1;
+}
+.footer-regular .recent-works-widget .recent-works-col .img-box:hover .mask .mask-btn i {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.footer-regular .recent-works-widget .recent-works-col .img-box:hover .mask .mask-btn i:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+/*# sourceMappingURL=footer-regular.css.map */
