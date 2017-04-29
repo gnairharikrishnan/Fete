@@ -15,11 +15,11 @@ USERNAME = os.environ.get("USERNAME")
 @app.route('/')
 def landing():
 	return render_template('index.html')
-	
+
 @app.route('/login')
 def login():
 	return render_template('login.html')
-		
+
 #Define route for register
 @app.route('/register')
 def register():
@@ -28,12 +28,12 @@ def register():
 #Authenticates the login
 @app.route('/loginAuth', methods=['GET', 'POST'])
 def loginAuth():
-	try:
+	'''try:
 		conn = pymysql.connect( host= HOST, user= USERNAME, password= PASSWORD, db= DB, charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
 	except:
 		print "Yo you done messed up"
 		error = 'Server connection error - contact site admin'
-		return render_template('login.html', error=error)
+		return render_template('login.html', error=error)'''
 	#grabs information from the forms
 	username = request.form['username']
 	password = request.form['password'].encode('utf-8')
@@ -59,7 +59,7 @@ def loginAuth():
 		error = 'Invalid login or username'
 		return render_template('login.html', error=error)
 
-		
+
 
 app.secret_key = 'This key is truely secret'
 if __name__ == "__main__":

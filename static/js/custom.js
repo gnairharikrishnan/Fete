@@ -65,6 +65,15 @@ $(document).ready(function () {
     });
 });
 
+$('.book-now-button').on('click',function(event){
+  "use strict";
+
+  event.preventDefault();
+  $('html, body').animate({
+    scrollTop: $(".section-info1").offset().top
+  }, 2000);
+});
+
 // Capture scroll events
 happyKiddoWindow.on('scroll', function () {
     "use strict";
