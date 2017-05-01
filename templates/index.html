@@ -715,33 +715,33 @@ Our professionnal team puts at your disposal their competences, creativity, and 
             <div class="container">
               <h2 class="section-heading text-center">Party <span>Booking</span> Form</h2>
               <p  class="text-center">Please fill out the Party Enquiry Form below. We will try to answer your<br>enquiry as quick as possible.</p>
-              <form class="booking margint-30 clearfix">
+              <form action="booking" method="post" enctype="multipart/form-data" class="booking margint-30 clearfix">
                 <div class="row clearfix">
                   <div class="form-group col-md-4 col-sm-4 col-xs-12">
                     <label>Your Name <span class="red">*</span></label>
-                    <input type="text" class="form-control" placeholder="Your Name">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name">
                   </div>
                   <div class="form-group col-md-4 col-sm-4 col-xs-12">
                     <label>Your Email <span class="red">*</span></label>
-                    <input type="email" class="form-control" placeholder="Your Email">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email">
                   </div>
                   <div class="form-group col-md-4 col-sm-4 col-xs-12">
                     <label>Your Phone <span class="red">*</span></label>
-                    <input type="number" class="form-control" placeholder="Your Phone">
+                    <input type="number" class="form-control" name="phoneNumber" placeholder="Your Phone">
                   </div>
                 </div>
                 <div class="row clearfix">
                   <div class="form-group col-md-4 col-sm-4 col-xs-12">
                     <label>Home Town <span class="red">*</span></label>
-                    <input type="text" class="form-control" placeholder="Home Town">
+                    <input type="text" class="form-control" name="town" placeholder="Home Town">
                   </div>
                   <div class="form-group col-md-4 col-sm-4 col-xs-12">
                     <label>Child Name(s) <span class="red">*</span></label>
-                    <input type="text" class="form-control" placeholder="Child Name(s)">
+                    <input type="text" class="form-control" name="childNames" placeholder="Child Name(s)">
                   </div>
                   <div class="form-group col-md-4 col-sm-4 col-xs-12">
                     <label>Childs Age <span class="red">*</span></label>
-                    <input type="text" class="form-control" placeholder="Childs Age">
+                    <input type="text" class="form-control" name="childAge" placeholder="Childs Age">
                   </div>
                 </div>
                 <div class="row clearfix">
@@ -757,15 +757,15 @@ Our professionnal team puts at your disposal their competences, creativity, and 
                   </div>
                   <div class="form-group col-md-4 col-sm-4 col-xs-12">
                     <label>Package <span class="red">*</span></label>
-                    <select class="form-control">
-                      <option>Premium Package</option>
-                      <option>Delux Package</option>
-                      <option>Standard Package</option>
+                    <select class="form-control" name="package">
+                      <option value="Premium Package">Premium Package</option>
+                      <option value="Deluxe Package">Deluxe Package</option>
+                      <option value="Standard Package">Standard Package</option>
                     </select>
                   </div>
                   <div class="form-group col-md-4 col-sm-4 col-xs-12">
                     <label>Preferred Time of Party *<span class="red">*</span></label>
-                    <input type="text" class="form-control"  placeholder="13:00 - 18:00">
+                    <input type="text" class="form-control" name="partyTime" placeholder="13:00 - 18:00">
                   </div>
                 </div>
                 <div class="row clearfix">
@@ -773,11 +773,11 @@ Our professionnal team puts at your disposal their competences, creativity, and 
                 <div class="row clearfix">
                   <div class="form-group col-md-12 col-sm-12 col-xs-12">
                     <label>Additional Information?</label>
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea class="form-control" name="info" rows="3"></textarea>
                   </div>
                 </div>
                 <div class="row clearfix btn-row">
-                  <button type="submit" class="btn btn-default">    Book    </button>
+                  <button type="submit" class="btn btn-default" value="Upload" onclick="return confirm('Are you sure?')">    Book    </button>
                   <img class="form-arrow" src="./static/images/happykiddo_form-arrow.png" alt="">
                 </div>
               </form>

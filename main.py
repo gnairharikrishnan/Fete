@@ -1,6 +1,10 @@
 #Import libaraies below
-from flask import Flask, render_template, request, session, url_for, redirect
+from flask import Flask, render_template, request, session, url_for, redirect, flash
 import os
+import time
+import smtplib
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEText import MIMEText
 
 #Initialize the app from Flask
 app = Flask(__name__)
@@ -10,20 +14,19 @@ DB = os.environ.get("DB")
 HOST = os.environ.get("HOST")
 PASSWORD = os.environ.get("PASSWORD")
 USERNAME = os.environ.get("USERNAME")
+FROMADDR = os.environ.get("FROMADDR")
+EPASS = os.environ.get("EPASS")
+RECIPIENTS = ['ssk545@nyu.edu', 'hgn212@nyu.edu', 'pa1027@nyu.edu', 'ksd316@nyu.edu', 'amn419@nyu.edu'] #os.environ.get("RECIPIENTS")
 
 #Define route for landing at /
 @app.route('/')
 def landing():
+	flash("Submitted!")
 	return render_template('index.html')
 
-@app.route('/login')
-def login():
-	return render_template('login.html')
-
-#Define route for register
-@app.route('/register')
-def register():
-	return render_template('register.html')
+@app.route('/index')
+def index():
+	return redirect(url_for('/'))
 
 #Authenticates the login
 @app.route('/loginAuth', methods=['GET', 'POST'])
@@ -58,6 +61,67 @@ def loginAuth():
 		#returns an error message to the html page
 		error = 'Invalid login or username'
 		return render_template('login.html', error=error)
+		
+@app.route('/booking', methods=['POST'])
+def booking():
+	name = request.form['name']
+	email = request.form['email']
+	phone = request.form['phoneNumber']
+	town = request.form['town']
+	childNames = request.form['childNames']
+	age = request.form['childAge']
+	date = request.form['date']
+	package = request.form['package']
+	partyTime = request.form['partyTime']
+	info = request.form['info']
+	
+	emailMessage = '''
+	Book date: %s
+	
+	Client Name: %s
+	Client Email: %s
+	Client Phone Number: %s
+	Client Home Town: %s
+	Client Children Names: %s
+	Client Children Ages: %s
+	Client Party Date: %s
+	Client Party Package: %s
+	Client Party Time: %s
+	Additional Client Info: %s ''' % (time.strftime("%m/%d/%Y"), name, email, phone, town, childNames, age, date, package, partyTime, info)
+	
+	clientEmailMessage = "The info below has been sent to the fete team, we will get back to you ASAP! \n" + emailMessage
+	
+	#USERS MESSAGE!!!
+	msg = MIMEMultipart()
+	msg['From'] = FROMADDR
+	msg['To'] = ", ".join(RECIPIENTS)
+	msg['Subject'] = "New Booking Email! - %s" % time.strftime("%m/%d/%Y")
+	 
+	msg.attach(MIMEText(emailMessage, 'plain'))
+	 
+	server = smtplib.SMTP('smtp.gmail.com', 587)
+	server.starttls()
+	server.login(FROMADDR, EPASS)
+	text = msg.as_string()
+	server.sendmail(FROMADDR, RECIPIENTS, text)
+	server.quit()
+	
+	#CLIENT MESSAGE!!!
+	msg = MIMEMultipart()
+	msg['From'] = FROMADDR
+	msg['To'] = email
+	msg['Subject'] = "New Booking Email! - %s" % time.strftime("%m/%d/%Y")
+	
+	msg.attach(MIMEText(clientEmailMessage, 'plain'))
+	 
+	server = smtplib.SMTP('smtp.gmail.com', 587)
+	server.starttls()
+	server.login(FROMADDR, EPASS)
+	text = msg.as_string()
+	server.sendmail(FROMADDR, email, text)
+	server.quit()
+	
+	return render_template('index.html')
 
 
 
