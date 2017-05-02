@@ -21,12 +21,11 @@ RECIPIENTS = ['ssk545@nyu.edu', 'hgn212@nyu.edu', 'pa1027@nyu.edu', 'ksd316@nyu.
 #Define route for landing at /
 @app.route('/')
 def landing():
-	flash("Submitted!")
 	return render_template('index.html')
 
 @app.route('/index')
 def index():
-	return redirect(url_for('/'))
+	return render_template('index.html')
 	
 @app.route('/deluxe')
 def deluxe():
