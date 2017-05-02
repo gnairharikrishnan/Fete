@@ -27,6 +27,21 @@ def landing():
 @app.route('/index')
 def index():
 	return redirect(url_for('/'))
+	
+@app.route('/deluxe')
+def deluxe():
+	return render_template('deluxe.html')
+
+
+@app.route('/standard')
+def standard():
+	return render_template('standard.html')
+	
+
+@app.route('/premium')
+def premium():
+	return render_template('premium.html')
+
 
 #Authenticates the login
 @app.route('/loginAuth', methods=['GET', 'POST'])
